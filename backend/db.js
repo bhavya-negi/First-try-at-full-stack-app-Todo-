@@ -1,0 +1,16 @@
+const mongoose = require("mongoose");
+const { string, boolean } = require("zod");
+mongoose.connect(
+  " "
+);
+const todoSchema = mongoose.Schema({
+    title: String,
+    description: String,
+    completed: boolean
+})
+
+const todo = mongoose.model("todos",todoSchema)
+
+module.exports = {
+    todo: todo
+}
